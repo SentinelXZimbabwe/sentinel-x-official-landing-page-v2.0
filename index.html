@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sentinel X</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #0f2027;
+    }
+
+    .hero-bg {
+      background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #0f2027);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .module-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s forwards;
+    }
+
+    .module-card:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px #00f0ff, 0 0 50px rgba(0,240,255,0.6);
+    }
+
+    .module-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin: 0 auto 16px auto;
+      border: 3px solid rgba(0,255,200,0.4);
+      border-radius: 12px;
+      padding: 8px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0,255,200,0.5);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .module-logo:hover {
+      box-shadow: 0 0 25px rgba(0,255,200,0.8);
+      transform: scale(1.1);
+      border-color: rgba(0,255,200,0.8);
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-pulse-slow {
+      animation: pulse 2.5s infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="relative hero-bg text-white h-screen flex flex-col items-center justify-center text-center px-4">
+    <img src="logos/main-logo.png" alt="Sentinel X Logo" class="w-32 h-32 mb-6 animate-pulse-slow">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 font-[Orbitron] animate-pulse-slow">Sentinel X</h1>
+    <p class="text-xl md:text-2xl mb-8 max-w-2xl">The Future of Communication, Robotics & Smart Cities — Powered by Innovation</p>
+    <a href="#features" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">
+      <i class="fas fa-rocket"></i> Explore Now
+    </a>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 font-[Orbitron]">Our Modules</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <!-- SentX Chat -->
+        <a href="https://sentinelxzimbabwe.github.io/sentx-chat-v1.0/index.html" target="_blank" class="module-card bg-white rounded-2xl shadow-lg p-8 text-center block" style="animation-delay: 0.1s">
+          <img src="logos/sentx-chat.png" alt="SentX Chat" class="module-logo">
+          <h3 class="text-2xl font-semibold mb-2">SentX Chat</h3>
+          <p class="text-gray-600">A secure, real-time communication platform for communities, schools, and organizations.</p>
+        </a>
+
+        <!-- Robotics -->
+        <a href="https://edgebotmkii.pythonanywhere.com/" target="_blank" class="module-card bg-white rounded-2xl shadow-lg p-8 text-center block" style="animation-delay: 0.2s">
+          <img src="logos/edgebot.png" alt="Robotics" class="module-logo">
+          <h3 class="text-2xl font-semibold mb-2">Robotics</h3>
+          <p class="text-gray-600">Integrate autonomous systems, IoT devices, and AI-driven robotics into your environment.</p>
+        </a>
+
+        <!-- Entertainment -->
+        <a href="https://sentinelxzimbabwe.github.io/echo-tv/" target="_blank" class="module-card bg-white rounded-2xl shadow-lg p-8 text-center block" style="animation-delay: 0.3s">
+          <img src="logos/echotv.png" alt="Entertainment" class="module-logo">
+          <h3 class="text-2xl font-semibold mb-2">Entertainment</h3>
+          <p class="text-gray-600">Stream TV, media, and interactive content seamlessly through our Sentinel X platform.</p>
+        </a>
+
+        <!-- Marketplace -->
+        <a href="https://sentinelxzimbabwe.github.io/sentinelx-marketplace/" class="module-card bg-white rounded-2xl shadow-lg p-8 text-center block" style="animation-delay: 0.4s">
+          <img src="logos/market-place.png" alt="Marketplace" class="module-logo">
+          <h3 class="text-2xl font-semibold mb-2">Marketplace</h3>
+          <p class="text-gray-600">Buy, sell, and trade in a secure digital marketplace integrated directly into Sentinel X.</p>
+        </a>
+
+        <!-- Civic Portal -->
+        <a href="https://sentinelxzimbabwe.github.io/sentinel-x-public-services/" target="_blank" class="module-card bg-white rounded-2xl shadow-lg p-8 text-center block" style="animation-delay: 0.5s">
+          <img src="logos/civic-board.png" alt="Civic Portal" class="module-logo">
+          <h3 class="text-2xl font-semibold mb-2">Civic Portal</h3>
+          <p class="text-gray-600">Connect with government services, public information, and smart city tools from one dashboard.</p>
+        </a>
+
+        <!-- About Developers -->
+        <a href="https://sentinelxzimbabwe.github.io/sentx-devs/" target="_blank" class="module-card bg-white rounded-2xl shadow-lg p-8 text-center block" style="animation-delay: 0.6s">
+          <img src="logos/sentx-devs.png" alt="About Developers" class="module-logo">
+          <h3 class="text-2xl font-semibold mb-2">About the Developers</h3>
+          <p class="text-gray-600">Meet the minds behind Sentinel X — engineers, designers, and architects pushing smart technology boundaries.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-indigo-600 text-white py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 font-[Orbitron]">Join the Sentinel X Movement</h2>
+    <p class="mb-8 text-lg md:text-xl">Experience next-level connectivity, automation, and smart solutions today.</p>
+    <a href="#features" class="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-200 transition">
+      <i class="fas fa-bolt"></i> Get Started
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 text-center">
+    <p>© 2025 Sentinel X Systems. All rights reserved.</p>
+  </footer>
+</body>
+</html>
