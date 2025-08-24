@@ -1,0 +1,21 @@
+{
+  "name": "Sentinel X Landing Page",
+  "short_name": "Sentinel X",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f2027",
+  "theme_color": "#1a2a6c",
+  "description": "Official landing page for Sentinel X.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48 64x64 128x128 256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logos/main-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
